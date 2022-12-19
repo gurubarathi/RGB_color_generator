@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+   .box{
+    height:100px;
+	width:100px;
+	background-color:aqua;
+   }
+ </style>
+</head>
+<body>
+  <div class="box" id="boxs">
+    <button id="btn">Chnage color</button> 
+  </div>
+  
+  <script>
+     let btn = document.getElementById("btn");
+	 btn.addEventListener("click",myFunction);
+	 
+	 function myFunction() {
+	   let value1=Math.floor((Math.random()*255));
+	   let value2=Math.floor((Math.random()*255));
+	   let value3=Math.floor((Math.random()*255));
+	   
+	   document.body.style.backgroundColor=`rgb( ${value1},${value2},${value3})`;
+	} 
+	</script>
+</body>
+</html>
